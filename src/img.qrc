@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>data/img/svm.png</file>
+        <file>data/img/station.png</file>
+        <file>data/img/wave.png</file>
+        <file>data/img/events.png</file>
+    </qresource>
+</RCC>

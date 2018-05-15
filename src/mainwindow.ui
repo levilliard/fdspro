@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>619</width>
+    <height>488</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>URGEO</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetNoConstraint</enum>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>2</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>3</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="1">
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QWidget" name="side_menu" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>130</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="stationGoBtn">
+             <property name="maximumSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QTreeWidget" name="network_menu">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>300</height>
+              </size>
+             </property>
+             <column>
+              <property name="text">
+               <string>Networks</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="QWidget" name="bmenu" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>300</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLineEdit" name="stationEdit">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QStackedWidget" name="stackedWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>500</width>
+            <height>0</height>
+           </size>
+          </property>
+          <widget class="QWidget" name="page_9"/>
+          <widget class="QWidget" name="page_10"/>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>619</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionFile"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionAdd_Network"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionStations"/>
+    <addaction name="actionNetwork"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout_URGEO"/>
+    <addaction name="actionHelp"/>
+   </widget>
+   <widget class="QMenu" name="menuuser_levilliard">
+    <property name="title">
+     <string>user</string>
+    </property>
+    <addaction name="actionlevilliard"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuuser_levilliard"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionFile">
+   <property name="text">
+    <string>File</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionStations">
+   <property name="text">
+    <string>Stations</string>
+   </property>
+  </action>
+  <action name="actionNetwork">
+   <property name="text">
+    <string>Network</string>
+   </property>
+  </action>
+  <action name="actionAbout_URGEO">
+   <property name="text">
+    <string>About URGEO</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionlevilliard">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>levilliard</string>
+   </property>
+  </action>
+  <action name="actionAdd_Network">
+   <property name="text">
+    <string>Add Stations</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>309</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

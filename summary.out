@@ -1,0 +1,7 @@
+                  type           mag           depth             rms      
+ anthropogenic event:   3   Min.   :1.00   Min.   : -3.45   Min.   :0.00  
+ earthquake         :8277   1st Qu.:1.21   1st Qu.:  3.16   1st Qu.:0.08  
+ explosion          :  51   Median :1.50   Median :  6.63   Median :0.15  
+ landslide          :   1   Mean   :1.76   Mean   :  8.90   Mean   :0.20  
+ mining explosion   :  14   3rd Qu.:2.19   3rd Qu.:  9.65   3rd Qu.:0.24  
+ quarry blast       : 209   Max.   :6.20   Max.   :182.00   Max.   :2.35  

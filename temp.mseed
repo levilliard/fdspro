@@ -1,0 +1,11 @@
+Error 404: Not Found: No data selected
+
+
+Request:
+http://192.168.0.100:8000/fdsnws/dataselect/1/query?net=Papa&amp;sta=GVA06&amp;loc=08&amp;cha=HNN&amp;start=2018-05-01T01:08:37.000&amp;end=2018-05-01T02:27:56.0002018-05-01T02:27:56.000&amp;nodata=404
+
+Request Submitted:
+2018-05-03T14:14:53.805273 UTC
+
+Service version:
+fdsnws-dataselect: v 1.1.1

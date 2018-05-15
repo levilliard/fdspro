@@ -1,0 +1,51 @@
+
+R version 3.4.3 (2017-11-30) -- "Kite-Eating Tree"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-redhat-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> #!/usr/bin/env Rscript
+> 
+> library(dplyr, warn.conflicts = FALSE)
+> library(tidyr, warn.conflicts = FALSE)
+> library(ggplot2)
+> seismic <- read.csv("seismic_data.csv")
+> seismic <- seismic %>%
++     dplyr::select(-magType, -nst, -gap, -dmin, -net, -updated) %>%
++         mutate(type = factor(type)) %>%
++             filter(latitude < 49,
++                    latitude > 18,
++                    longitude < -63.37,
++                    longitude > -124.6) %>%
++     dplyr::select(type, mag, depth, rms) %>%
++     na.omit()
+> summary(seismic)
+                  type           mag            depth              rms        
+ anthropogenic event:   4   Min.   :1.000   Min.   : -3.450   Min.   :0.0000  
+ earthquake         :8546   1st Qu.:1.210   1st Qu.:  3.180   1st Qu.:0.0800  
+ explosion          :  85   Median :1.520   Median :  6.727   Median :0.1500  
+ landslide          :   1   Mean   :1.759   Mean   :  9.063   Mean   :0.1975  
+ mining explosion   :  14   3rd Qu.:2.185   3rd Qu.:  9.810   3rd Qu.:0.2400  
+ quarry blast       : 209   Max.   :6.200   Max.   :182.000   Max.   :2.3500  
+> 
+> p<- ggplot(seismic, aes(x = type, fill = type))
+> p<- p+geom_bar()
+> p<- p+coord_flip()
+> print(p)
+> 
+> proc.time()
+   user  system elapsed 
+  1.531   0.030   1.565 

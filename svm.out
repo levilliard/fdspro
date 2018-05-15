@@ -1,0 +1,7 @@
+              Reference
+Prediction     earthquake explosion quarry blast
+  earthquake         1655        14           42
+  explosion             0         0            0
+  quarry blast          0         0            0
+ Accuracy 
+0.9672706 
